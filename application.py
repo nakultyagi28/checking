@@ -58,7 +58,7 @@ def students():
         return jsonify({"success": True})
 
 
-application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://python:python123@aa1vwu834gtda7c.ckrojnpkqucm.us-east-1.rds.amazonaws.com:5432/student"
+application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://python:python123@aa1n4ts75yk5nfa.ckrojnpkqucm.us-east-1.rds.amazonaws.com:5432/student"
 db = SQLAlchemy(application)
 migrate = Migrate(application, db)
 
