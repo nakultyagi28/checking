@@ -1,4 +1,4 @@
-var serverAddress = "http://localhost:7000/students";
+var serverAddress = "http://python-env.eba-kvfipmqa.us-east-1.elasticbeanstalk.com/students";
 
 function showAddForm(){
     document.getElementById("addForm").style.display="block";
