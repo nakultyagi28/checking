@@ -32,13 +32,31 @@ function showViewForm(){
     })
     .then(response => response.json())
     .then(json => {
-      console.log(json);
       var tablearea = document.getElementById('tablearea'),
       table = document.createElement('table');
 
       table.setAttribute("id", 'studentTable');
+      thead = document.createElement('thead');
+      thead.setAttribute('class', 'thead-dark');
 
-      if(json.students.length > 0){        
+      tbody = document.createElement('tbody');
+      if(json.students.length > 0){
+        tr = document.createElement('tr');
+
+        tr.appendChild(document.createElement('th'));
+        tr.appendChild(document.createElement('th'));
+        tr.appendChild(document.createElement('th'));
+        tr.appendChild(document.createElement('th'));
+        
+        tr.cells[0].appendChild(document.createTextNode('Id'));
+        tr.cells[1].appendChild(document.createTextNode('Name'));
+        tr.cells[2].appendChild(document.createTextNode('Contact number'));
+        tr.cells[3].appendChild(document.createTextNode('Email Id'));
+        
+        thead.appendChild(tr);
+
+        table.appendChild(thead);
+
         for (var i = 0; i < json.students.length; i++) {
           var tr = document.createElement('tr');
   
@@ -52,15 +70,16 @@ function showViewForm(){
           tr.cells[2].appendChild( document.createTextNode(json.students[i].contactNumber) );
           tr.cells[3].appendChild( document.createTextNode(json.students[i].emailId) );
   
-          table.appendChild(tr);
+          tbody.appendChild(tr);
         }
       }else{
         var tr = document.createElement('tr');
   
         tr.appendChild( document.createElement('td') );
-        tr.cells[0].appendChild( document.createTextNode('data not available.!') );
+        tr.cells[0].appendChild( document.createTextNode('Data not available.!') );
         table.appendChild(tr);
       }
+      table.appendChild(tbody);
       tablearea.appendChild(table);
     })
     .catch(err => {
@@ -69,8 +88,10 @@ function showViewForm(){
 
     const parent = document.getElementById("tablearea");
     const tableTag = document.getElementById('studentTable');
-
-    parent.removeChild(tableTag);
+    
+    if(parent.contains(tableTag)){
+      parent.removeChild(tableTag);
+    }
 }
 
 function addStudent() {
