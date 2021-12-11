@@ -1,0 +1,75 @@
+.mainContainer{
+    margin-top: 50px; 
+    width: 70%; 
+    height: auto; 
+    background-image: url('../images/myPortalBackground.jpg');
+}
+
+.mainHeading{
+    margin-left: 15px; 
+    margin-bottom: 10px; 
+    color: #cacdd1 !important;
+}
+
+.mainBtn{
+    background-color: #798087 !important; 
+    border-color: #7f8387 !important;
+    color: #fff !important;
+}
+
+.updateSubmitBtn{
+    margin: 0 15px 10px 15px;
+    background-color: #798087 !important; 
+    border-color: #7f8387 !important;
+    color: #fff !important;
+}
+
+.addSubmitBtn{
+    margin: 0 15px 10px 15px;
+    background-color: #798087 !important; 
+    border-color: #7f8387 !important;
+    color: #fff !important;
+}
+
+.table{
+    display: none; 
+    background-color: #fff;
+}
+
+#studentTable{
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+#updateStudentDialog{
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.loadMask{
+    background: #000;
+    position: fixed;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    z-index:99;
+}
+
+.actionBtn{
+    border: none;
+    background-color: unset;
+}
+
+.updateBtn{
+    color: grey;
+}
+
+.deleteBtn{
+    color: rgb(255, 68, 68);
+}
