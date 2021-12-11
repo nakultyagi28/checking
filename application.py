@@ -62,7 +62,6 @@ application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://python:python123@d
 db = SQLAlchemy(application)
 migrate = Migrate(application, db)
 
-
 class StudentsModel(db.Model):
     __tablename__ = 'students'
 
