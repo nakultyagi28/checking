@@ -14,6 +14,7 @@ def index():
     return render_template('app.html')
 
 
+
 @application.route('/students', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def students():
     result = {"success": False}
@@ -77,7 +78,7 @@ def students():
         finally:
             return jsonify(result)
 
-application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://python:python123@database-1.ckrojnpkqucm.us-east-1.rds.amazonaws.com:5432/student"
+application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:python123@database-4.cvmkcdhwam9i.us-east-1.rds.amazonaws.com:5432/student"
 db = SQLAlchemy(application)
 migrate = Migrate(application, db)
 

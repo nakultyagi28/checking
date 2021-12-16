@@ -3,6 +3,9 @@
     width: 70%; 
     height: auto; 
     background-image: url('../images/myPortalBackground.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
 .mainHeading{
