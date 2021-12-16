@@ -1,4 +1,4 @@
-var serverAddress = "http://python-env.eba-kvfipmqa.us-east-1.elasticbeanstalk.com/students";
+var serverAddress = "http://cpppythonportal-env.eba-fabgv68f.us-east-1.elasticbeanstalk.com/students";
 
 window.onload = function() {
   showViewForm();
